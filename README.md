@@ -8,7 +8,7 @@ Language used for backend development: Python (flask framework)
 - 400: Bad request / Invalid argument (invalid request payload)
 - 404: Not found
 - 409: Conflict response status code indicates a request conflict with the current state of the target resource
-- 502: Bad gateway
+- 415: Header is missing
 
 ### Project Hierarchy
 
@@ -41,6 +41,7 @@ project
 ```
 
 ### Database Structure
+![Database architecture](images/database_image.png)
 
 ### Running the Application
 Install Flask:
@@ -65,7 +66,5 @@ The application will start running on `http://127.0.0.1:8000/`
 To seed the database with dummy data, I have added a separate route in the `main.py` file.
 
 To seed the database with mock data just send a request to `/seed` with the `GET` method
-
-### Endpoint Descriptions
 
 ### Testing on Postman
