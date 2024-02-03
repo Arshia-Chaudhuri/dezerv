@@ -12,6 +12,10 @@ from functionalities.fetchAllCourses import *
 from functionalities.deleteSingleCourse import *
 from functionalities.getStudentSingleCourse import *
 
+from enroll_utilities.enroll import *
+from enroll_utilities.unenroll import *
+from enroll_utilities.updateMarks import *
+
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///course_management.db'
 db.init_app(app)
@@ -84,17 +88,17 @@ def index12():
 # 13. Enroll a specified student in a course by using POST mapping with API endpoint api/enrollments/enroll. This should add student, and course objects to the Enrollment table.
 @app.route('/api/enrollments/enroll', methods=['POST'])
 def index13():
-    pass
+    return enrolling()
 
 # 14. Unenroll a specified student from a course by using DELETE mapping with API endpoint api/enrollments/unenroll.
 @app.route('/api/enrollments/unenroll', methods=['DELETE'])
 def index14():
-    pass
+    return unenrolling()
 
 # 15. Update marks for a particular student in a specified course by using PUT mapping with API endpoint api/enrollments/updateMarks.
 @app.route('/api/enrollments/updateMarks', methods=['PUT'])
 def index15():
-    pass
+    return marks_updation()
 
 if __name__ == '__main__':
     with app.app_context():
