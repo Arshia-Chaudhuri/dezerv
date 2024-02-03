@@ -83,12 +83,15 @@ To seed the database with dummy data from `seed.py` file
 To seed the database with mock data just send a request to `/seed` with the `GET` method
 
 The mock data for `Student` table is as follows
+
 ![Example of #student](images/student.png)
 
 The mock data for `Course` table is as follows
+
 ![Example of #course](images/course.png)
 
 The mock data for `Enrollment` table is as follows
+
 ![Example of #enrollment](images/enrollment.png)
 
 ### Testing the functionalities on Postman
