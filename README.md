@@ -84,39 +84,55 @@ To seed the database with mock data just send a request to `/seed` with the `GET
 
 The mock data for `Student` table is as follows
 ![Example of #student](images/student.png)
+
 The mock data for `Course` table is as follows
 ![Example of #course](images/course.png)
+
 The mock data for `Enrollment` table is as follows
 ![Example of #enrollment](images/enrollment.png)
 
 ### Testing the functionalities on Postman
 **1. Create a student using POST mapping with API endpoint api/students/**
 ![Example of #1](images/1.png)
+
 **2. Fetch a single student using GET mapping with API endpoint api/students/{id}**
 ![Example of #2](images/2.png)
+
 **3. Fetch all students using GET mapping with API endpoint api/students/**
 ![Example of #3](images/3.png)
+
 **4. Delete a specific student using DELETE mapping with API endpoint api/students/{id}**
 ![Example of #4](images/4.png)
+
 **5. Get courses for a specific student using GET mapping with API endpoint api/students/{id}/courses**
 ![Example of #5](images/5.png)
+
 **6. Create a course using POST mapping with API endpoint api/courses/**
 ![Example of #6](images/6.png)
+
 **7. Fetch a single course using GET mapping with API endpoint api/courses/{id}**
 ![Example of #7](images/7.png)
+
 **8. Fetch all courses using GET mapping with API endpoint api/courses/**
 ![Example of #8](images/8.png)
+
 **9. Delete a specific course using DELETE mapping with API endpoint api/courses/{id}**
 ![Example of #9](images/9.png)
+
 **10. Get students for a specific course using GET mapping with API endpoint api/courses/{id}/students**
 ![Example of #10](images/10.png)
+
 **11 Get the most enrolled course using GET mapping with API endpoint api/courses/most-enrolled**
 ![Example of #11](images/11.png)
+
 **12 Get the highest marks scored in a specific course by a student using GET mapping with API endpoint api/courses/highest-marks/{courseId}**
 ![Example of #12](images/12.png)
+
 **13. Enroll a specified student in a course by using POST mapping with API endpoint api/enrollments/enroll. This should add student, and course objects to the Enrollment table**
 ![Example of #13](images/13.png)
+
 **14. Unenroll a specified student from a course by using DELETE mapping with API endpoint api/enrollments/unenroll**
 ![Example of #14](images/14.png)
+
 **15. Update marks for a particular student in a specified course by using PUT mapping with API endpoint api/enrollments/updateMarks**
 ![Example of #15](images/15.png)
