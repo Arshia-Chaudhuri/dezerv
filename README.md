@@ -38,6 +38,9 @@ project
     |- README.md
     |- images
         |- database_image.png
+        |- course.png
+        |- student.png
+        |- enrollment.png
         |- 1.png
         |- 2.png
         |- 3.png
