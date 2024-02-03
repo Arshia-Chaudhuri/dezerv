@@ -11,7 +11,8 @@ from functionalities.fetchSingleCourse import *
 from functionalities.fetchAllCourses import *
 from functionalities.deleteSingleCourse import *
 from functionalities.getStudentSingleCourse import *
-
+from functionalities.mostEnrolled import *
+from functionalities.studentsWithHighestMarks import *
 from enroll_utilities.enroll import *
 from enroll_utilities.unenroll import *
 from enroll_utilities.updateMarks import *
@@ -78,12 +79,12 @@ def index10(id):
 # 11 Get the most enrolled course using GET mapping with API endpoint api/courses/most-enrolled.
 @app.route('/api/courses/most-enrolled', methods=['GET'])
 def index11():
-    pass
+    return most_enrolled()
 
 # 12 Get the highest marks scored in a specific course by a student using GET mapping with API endpoint api/courses/highest-marks/{courseId}.
 @app.route('/api/courses/highest-marks/<int:courseId>', methods=['GET'])
-def index12():
-    pass
+def index12(courseId):
+    return students_with_highest_marks(courseId)
 
 # 13. Enroll a specified student in a course by using POST mapping with API endpoint api/enrollments/enroll. This should add student, and course objects to the Enrollment table.
 @app.route('/api/enrollments/enroll', methods=['POST'])
