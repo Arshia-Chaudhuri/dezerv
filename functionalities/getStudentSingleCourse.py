@@ -3,7 +3,7 @@ import json
 from utils.db import db, Student, Course, Enrollment
 from functionalities.fetchSingleStudent import *
 
-def get_student_of_a_course(id, internally=False):
+def get_student_of_a_course(id, internally=False, from_students_with_highest_marks=False):
     try:
         course = Course.query.get(id)
 
@@ -14,6 +14,21 @@ def get_student_of_a_course(id, internally=False):
 
         if enrollment is None:
             return jsonify({'message': 'The course is not registered by any student'})
+
+        if from_students_with_highest_marks:
+            external_result = []
+            max_marks = -1
+            stds = {}
+            for each in enrollment:
+                if each.marks!=None:
+                    try:
+                        stds[each.marks].append(each.studentId)
+                    except:
+                        stds[each.marks] = []
+                        stds[each.marks].append(each.studentId)
+                    if max_marks < each.marks:
+                        max_marks = each.marks
+            return (max_marks, stds[max_marks])
 
         result = []
         for each in enrollment:
