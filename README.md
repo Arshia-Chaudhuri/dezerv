@@ -1,6 +1,6 @@
 # Course management
 
-Language used for backend development: Python (flask framework)
+Language used for backend development: `Python` (flask framework)
 
 ### API Codes used
 
