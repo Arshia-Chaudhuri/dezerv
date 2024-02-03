@@ -75,6 +75,7 @@ The mock data for `Enrollment` table is as follows
 
 ### Testing the functionalities on Postman
 **1. Create a student using POST mapping with API endpoint api/students/**
+![Example of #1](images/1.png)
 
 **2. Fetch a single student using GET mapping with API endpoint api/students/{id}**
 
