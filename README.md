@@ -76,7 +76,7 @@ python main.py
 ```
 or
 ```
-python main.py
+python3 main.py
 ```
 The application will start running on `http://127.0.0.1:8000/`
 
