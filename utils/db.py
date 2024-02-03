@@ -21,4 +21,4 @@ class Course(db.Model):
 class Enrollment(db.Model):
     studentId = db.Column(db.Integer, db.ForeignKey('student.studentId', ondelete='CASCADE'), primary_key=True)
     courseId = db.Column(db.Integer, db.ForeignKey('course.courseId', ondelete='CASCADE'), primary_key=True)
-    marks = db.Column(db.Integer, nullable=False)
+    marks = db.Column(db.Integer, nullable=True)
