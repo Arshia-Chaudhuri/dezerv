@@ -2,6 +2,26 @@
 
 Language used for backend development: `Python` (flask framework)
 
+### Database Structure
+![Database architecture](images/database_image.png)
+
+### Seeding the Database with Mock Data
+To seed the database with dummy data from `seed.py` file
+
+To seed the database with mock data just send a request to `/seed` with the `GET` method
+
+The mock data for `Student` table is as follows
+
+![Example of #student](images/student.png)
+
+The mock data for `Course` table is as follows
+
+![Example of #course](images/course.png)
+
+The mock data for `Enrollment` table is as follows
+
+![Example of #enrollment](images/enrollment.png)
+
 ### API Codes used
 
 - 200: OK
@@ -58,45 +78,6 @@ project
         |- 15.png
 ```
 
-### Database Structure
-![Database architecture](images/database_image.png)
-
-### Running the Application
-Install Flask:
-```
-pip install Flask
-```
-Install Flask SQLAlchemy:
-```
-pip install Flask-SQLAlchemy
-```
-Run the application:
-```
-python main.py
-```
-or
-```
-python3 main.py
-```
-The application will start running on `http://127.0.0.1:8000/`
-
-### Seeding the Database with Mock Data
-To seed the database with dummy data from `seed.py` file
-
-To seed the database with mock data just send a request to `/seed` with the `GET` method
-
-The mock data for `Student` table is as follows
-
-![Example of #student](images/student.png)
-
-The mock data for `Course` table is as follows
-
-![Example of #course](images/course.png)
-
-The mock data for `Enrollment` table is as follows
-
-![Example of #enrollment](images/enrollment.png)
-
 ### Testing the functionalities on Postman
 **1. Create a student using POST mapping with API endpoint api/students/**
 ![Example of #1](images/1.png)
@@ -142,3 +123,22 @@ The mock data for `Enrollment` table is as follows
 
 **15. Update marks for a particular student in a specified course by using PUT mapping with API endpoint api/enrollments/updateMarks**
 ![Example of #15](images/15.png)
+
+### Instruction to run the Application
+Install Flask:
+```
+pip install Flask
+```
+Install Flask SQLAlchemy:
+```
+pip install Flask-SQLAlchemy
+```
+Run the application:
+```
+python main.py
+```
+or
+```
+python3 main.py
+```
+The application will start running on `http://127.0.0.1:8000/`
